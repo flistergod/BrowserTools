@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "BrowserTools",
+  "version": "0.2.0",
+  "description": "Manage bookmarks, extensions and history in your current browser profile.",
+  "permissions": ["bookmarks", "management", "history"],
+  "action": { "default_title": "Open BrowserTools" },
+  "background": { "service_worker": "background.js" },
+  "options_page": "index.html",
+  "incognito": "not_allowed",
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; object-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"
+  }
+}

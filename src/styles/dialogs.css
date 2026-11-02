@@ -1,0 +1,84 @@
+/* Native modal dialogs and their darkened page backdrop. */
+dialog {
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 26px;
+  width: 440px;
+  max-width: calc(100vw - 32px);
+  color: #334c3d;
+  box-shadow: 0 25px 100px #18332025;
+}
+dialog::backdrop {
+  background: #14291e66;
+  backdrop-filter: blur(3px);
+}
+dialog h2 {
+  font-family: Manrope, sans-serif;
+  font-size: 20px;
+  margin: 0 0 18px;
+}
+dialog p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #7d8a80;
+}
+.dialog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.dialog-heading button {
+  margin-top: -7px;
+  font-size: 24px;
+}
+form > label {
+  display: block;
+  font-size: 12px;
+  margin: 15px 0;
+}
+form input,
+form select {
+  display: block;
+  width: 100%;
+  border: 1px solid #dce5dc;
+  border-radius: 7px;
+  padding: 11px;
+  margin-top: 7px;
+  font-size: 12px;
+}
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 23px;
+}
+.dialog-actions button {
+  font-size: 12px;
+}
+#toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #244d37;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-size: 12px;
+  box-shadow: 0 8px 30px #244d3730;
+  display: block;
+  z-index: 10;
+}
+.permission {
+  display: inline-block;
+  margin: 4px;
+  padding: 5px 9px;
+  background: #eef3eb;
+  border-radius: 5px;
+  font-size: 12px;
+}
+#details-content ul {
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 2;
+}

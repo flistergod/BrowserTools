@@ -1,0 +1,173 @@
+/* Responsive overrides: spacious desktop, compact desktop, then mobile. */
+@media (min-width: 1450px) {
+  .content {
+    padding-top: 55px;
+  }
+  td {
+    padding-block: 19px;
+  }
+}
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 210px;
+    padding-inline: 15px;
+  }
+  .brand {
+    font-size: 16px;
+  }
+  main {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+  }
+  .content {
+    padding: 28px;
+  }
+  .topbar {
+    padding: 0 28px;
+  }
+  .stat em {
+    display: none;
+  }
+  .tools {
+    width: 100%;
+  }
+  .search {
+    flex: 1;
+  }
+  .search input {
+    width: 100%;
+  }
+  .date-column {
+    display: none;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    display: block;
+  }
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 18px;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .workspace,
+  .nav-label,
+  .sidebar-bottom {
+    display: none;
+  }
+  nav {
+    display: flex;
+    margin-top: 15px;
+    gap: 5px;
+  }
+  nav button {
+    font-size: 11px;
+    padding: 8px;
+    gap: 5px;
+  }
+  nav button > span {
+    font-size: 18px;
+  }
+  nav b {
+    display: none;
+  }
+  main {
+    margin: 0;
+    width: 100%;
+  }
+  .topbar {
+    height: 55px;
+    padding-inline: 18px;
+  }
+  .content {
+    padding: 25px 15px;
+  }
+  .page-heading {
+    align-items: flex-start;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+  .page-heading p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .primary {
+    font-size: 10px;
+    padding: 10px;
+    white-space: nowrap;
+  }
+  .stats {
+    gap: 7px;
+    margin: 22px 0;
+  }
+  .stat {
+    padding: 12px 9px;
+    gap: 7px;
+  }
+  .stat-icon {
+    display: none;
+  }
+  .stat strong {
+    font-size: 22px;
+  }
+  .stat small {
+    font-size: 9px;
+  }
+  .library-top {
+    padding: 12px;
+  }
+  .tabs button {
+    font-size: 10px;
+    padding: 7px;
+  }
+  .url {
+    max-width: 150px;
+  }
+  td,
+  th {
+    padding: 12px 10px;
+  }
+  .folder-column {
+    display: none;
+  }
+  .favicon {
+    width: 29px;
+    height: 29px;
+  }
+  .item-main {
+    gap: 8px;
+  }
+  .item-title {
+    font-size: 11px;
+  }
+  .row-actions {
+    gap: 0;
+  }
+  .row-actions button {
+    padding: 5px;
+  }
+  .extension-grid {
+    grid-template-columns: 1fr;
+    padding: 0 12px 12px;
+  }
+  .connection {
+    display: none;
+  }
+  .list-footer {
+    gap: 15px;
+    font-size: 8px;
+  }
+  .bottom-note p {
+    font-size: 9px;
+  }
+}

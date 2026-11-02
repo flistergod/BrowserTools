@@ -1,0 +1,83 @@
+/* Leave space for the desktop sidebar and position the workspace content. */
+main {
+  margin-left: 252px;
+  width: calc(100% - 252px);
+}
+.topbar {
+  height: 77px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 43px;
+  font-size: 11px;
+  color: #99a39c;
+  background: #fff9;
+}
+.topbar strong {
+  font-weight: 500;
+  color: #58685c;
+}
+.slash {
+  margin: 0 12px;
+  color: #c3cbc4;
+}
+.demo-pill {
+  border: 1px solid #e1e8d8;
+  background: #f5f8ed;
+  color: #7b895d;
+  border-radius: 30px;
+  padding: 8px 12px;
+  font-size: 10px;
+}
+.demo-pill i {
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  background: #92a762;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.content {
+  max-width: 1430px;
+  margin: auto;
+  padding: 43px;
+}
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.eyebrow {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #81927d;
+}
+h1 {
+  font-family: Manrope, sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -1.6px;
+  margin: 12px 0;
+}
+h1 span {
+  color: #75a377;
+}
+.page-heading p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+.primary {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+  font-size: 12px;
+  padding: 12px 18px;
+  box-shadow: 0 3px 5px #235f4312;
+}
+.primary:hover {
+  background: #194e39;
+}

@@ -1,0 +1,53 @@
+/* System fonts keep the extension completely local under its strict CSP. */
+/* Shared colours and default typography used throughout the interface. */
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #26372e;
+  background: #f7f9f7;
+  font-synthesis: none;
+  --green: #25634a;
+  --muted: #7c8981;
+  --border: #e7ece7;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+a,
+input,
+select {
+  outline-offset: 4px;
+}
+button {
+  cursor: pointer;
+}
+button {
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: inherit;
+}
+button:hover {
+  background: #eff4ef;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* React mounts the application inside this full-width root. */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
