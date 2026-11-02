@@ -2,9 +2,7 @@
 
 ## Goal and current scope
 
-BrowserTools is a React + JavaScript frontend built with Vite. The packaged Manifest V3 extension uses real browser APIs. The localhost development frontend remains a mock preview. Installation is manual; see [extension setup and security](EXTENSION.md). No site is published.
-
-The original plain JavaScript files have been replaced by components and modules. English is the language for interface text, documentation, errors and comments.
+BrowserTools is a React + JavaScript frontend built with Vite. The packaged Manifest V3 extension uses real browser APIs. The localhost development frontend provides a mock preview. See [extension setup and security](EXTENSION.md) for installation instructions.
 
 ## Features
 

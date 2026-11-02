@@ -10,7 +10,7 @@ export function createMockBackend(storage) {
       storage = null;
     }
   }
-  // A new version keeps the original Portuguese demonstration separate.
+  // Namespaced storage key for the demo database. Keep stable across reloads.
   const KEY = "browsertools.demo.v2.en";
   // Load previously saved JSON. If it is missing or unreadable, use samples.
   let data;

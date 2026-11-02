@@ -9,7 +9,7 @@ Run these commands in a PowerShell terminal. Node.js must be installed; this pro
 ### 1. Open the project folder
 
 ```powershell
-cd "C:\Users\Nelson\Desktop\projetos\BrowserTools"
+cd "path\to\BrowserTools"
 ```
 
 ### 2. Install dependencies (first launch only)
@@ -18,7 +18,7 @@ cd "C:\Users\Nelson\Desktop\projetos\BrowserTools"
 npm.cmd install
 ```
 
-Dependencies are already installed on this machine. Repeat this step after downloading the project elsewhere or when its dependencies change.
+Install dependencies after cloning the repository or when its dependencies change.
 
 ### 3. Start the development server
 
@@ -51,7 +51,7 @@ If PowerShell asks whether to terminate the batch job, confirm with `Y` and Ente
 After the first setup, these are the only commands needed:
 
 ```powershell
-cd "C:\Users\Nelson\Desktop\projetos\BrowserTools"
+cd "path\to\BrowserTools"
 npm.cmd run dev
 ```
 
@@ -69,7 +69,7 @@ Open the URL printed by the server. Demo data is stored per origin, so a differe
 npm.cmd test
 ```
 
-These tests check the mock backend. They do not launch the interface or access real Brave data.
+Tests cover the mock backend, the browser adapter with fake APIs, date filters and bulk operations. They do not launch the interface or access real Brave data.
 
 ## Build the app
 
@@ -111,4 +111,4 @@ npm.cmd --version
 
 **The page cannot connect:** keep the server terminal running and use its printed URL.
 
-**You want the original sample data:** click **Reset demonstration** in the app and confirm. The app uses simulated data only; it does not modify your real bookmarks, extensions or history.
+**Reset demo data:** in the localhost preview, click **Reset demonstration** and confirm. This option affects simulated data only and is unavailable in the installed extension, which manages live browser data.

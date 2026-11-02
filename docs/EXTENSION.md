@@ -5,15 +5,15 @@
 1. In PowerShell, open the project and build:
 
    ```powershell
-   cd "C:\Users\Nelson\Desktop\projetos\BrowserTools"
+   cd "path\to\BrowserTools"
    npm.cmd install
    npm.cmd run build
    ```
 
 2. Open `brave://extensions` in the Brave profile you want to manage.
-3. Enable **Developer mode** (already enabled on your machine).
+3. Enable **Developer mode**.
 4. Click **Load unpacked**.
-5. Select `C:\Users\Nelson\Desktop\projetos\BrowserTools\dist`.
+5. Select the `dist` folder inside your local project directory.
 6. Review the extension's requested access to bookmarks, installed extensions and history.
 7. Pin BrowserTools using Brave's extensions menu, then click its toolbar icon. The React workspace opens in a tab labelled **Live browser data**.
 
@@ -40,7 +40,7 @@ The manifest requests only `bookmarks`, `management` and `history`. These permis
 - Protected bookmark nodes and managed extensions are respected. Extension enabling/disabling runs directly from a user click so browser user-gesture checks remain effective.
 - New folders are created under the folder chosen in the editor. Special root folders are not renamed, moved or removed.
 
-Changes are real and can be permanent; bookmark changes may propagate through browser sync. This document does not authorize automatic execution of any destructive operation during development or tests.
+Changes are real and can be permanent; bookmark changes may propagate through browser sync.
 
 ## History loading
 
@@ -52,7 +52,7 @@ Browser history retention and visit availability are controlled by Brave. This a
 
 Automated tests use fake Chromium APIs; they never access or change your profile. Build checks validate the packaged manifest, scripts and CSP. Installation and real browser permission prompts must be verified manually in Brave; loading the extension is a user action.
 
-Loading unpacked installs locally. Publishing publicly in an extension store is a separate process involving a developer account, store review, privacy disclosures and a distributable ZIP; no store upload is performed here.
+Loading unpacked installs locally. Publishing in an extension store requires a developer account, store review, privacy disclosures and a distributable ZIP.
 
 ## Official references
 

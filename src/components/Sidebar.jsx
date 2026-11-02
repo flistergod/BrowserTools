@@ -17,7 +17,7 @@ export default function Sidebar({ view, onNavigate, data, onReset, busy }) {
       </a>
 
       <div className="workspace">
-        <span className="avatar">N</span>
+        <span className="avatar">B</span>
         <div>
           My workspace
           <small>

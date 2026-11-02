@@ -4,14 +4,14 @@ A local React workspace for Brave bookmarks, extensions and history. The install
 
 ## Run locally
 
-Requires Node.js 22.12+ or a newer supported release (the development machine uses Node 24).
+Requires Node.js 22.12+ or a newer supported release.
 
 ```powershell
 npm.cmd install
 npm.cmd run dev
 ```
 
-Open the local URL printed in the terminal in Brave. Vite normally uses `http://127.0.0.1:5173`. Keep the terminal running; press Ctrl+C to stop. Opening `index.html` directly is no longer supported because React source needs the development server or a build.
+Open the local URL printed in the terminal in Brave. Vite normally uses `http://127.0.0.1:5173`. Keep the terminal running; press Ctrl+C to stop. The React app requires a development server or a production build served over HTTP; opening `index.html` directly does not run the app.
 
 `npm.cmd` works in Windows PowerShell even when execution policy blocks `npm.ps1`. Other shells can use `npm`.
 
@@ -30,7 +30,7 @@ BrowserTools/
 │   ├── pages/                 # BookmarksPage, ExtensionsPage, HistoryPage
 │   ├── hooks/                 # Data loading, mutations, search and ordering
 │   ├── services/              # Backend adapter and mock implementation
-│   ├── data/                  # English demonstration records
+│   ├── data/                  # Demonstration records
 │   ├── utils/                 # Date and URL formatting
 │   └── styles/                # CSS separated by visual responsibility
 ├── tests/                     # Backend behaviour checks
@@ -52,8 +52,8 @@ npm.cmd run preview   # Serve the production build locally
 npm.cmd test          # Backend tests
 ```
 
-All UI labels, comments, errors, built-in sample records and documentation are in English. Dates use the `en-GB` locale. Users can still enter names in any language.
+Dates use the `en-GB` locale and local timezone. User-entered names support Unicode.
 
-The English demo uses a new storage key (`browsertools.demo.v2.en`). The previous Portuguese demo's data is left untouched and is not imported automatically. Changes persist in localStorage for the current origin; data opened through `file://` is separate from the Vite server. If storage is blocked, the app keeps its session data in memory.
+Demo changes persist in localStorage for the current origin. Different server ports have separate demo storage. If storage is blocked, the app keeps its session data in memory. The installed extension reads live browser data independently of the demo database.
 
 Formatting is configured in `.prettierrc.json`. CSS files keep one property per line; JSX replaces the old HTML template strings. `node_modules/` contains installed packages and `dist/` contains generated output; edit `src/` instead.
